@@ -8,5 +8,5 @@ Check out [this example output](https://gist.github.com/edmonds/5772879) from th
 ### Presentations
 A [slide deck](slides/dnstap.html) introducing `dnstap` and giving the current status was presented on June 13, 2013.
 
-### Mailing list
-There is a [dnstap mailing list](http://lists.redbarn.org/mailman/listinfo/dnstap) for everyone interested in discussing `dnstap`.
+### Community
+There is a [mailing list](http://lists.redbarn.org/mailman/listinfo/dnstap) for everyone interested in discussing `dnstap`.
