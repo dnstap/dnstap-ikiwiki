@@ -1,0 +1,1 @@
+`dnstap` was written by Robert Edmonds, with input from Paul Vixie.
