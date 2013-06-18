@@ -1,5 +1,5 @@
 ### Introduction
-`dnstap` adds a fast, binary format event stream directly into DNS servers. It uses [Protocol Buffers](https://developers.google.com/protocol-buffers/) to encode events that occur inside a nameserver in a vendor-neutral format. Currently `dnstap` can only encode the reception and transmission of wire-format DNS messages. Server-side `dnstap` support is being developed initially for the [Unbound](http://unbound.net/) recursive DNS server. A command line tool to receive and decode `dnstap` events is also being worked on.
+`dnstap` adds a fast, binary format event stream directly into DNS servers. It uses [Protocol Buffers](https://developers.google.com/protocol-buffers/) to encode events that occur inside a nameserver in a vendor-neutral format. Currently `dnstap` can only encode the reception and transmission of wire-format DNS messages. Server-side `dnstap` support is being developed initially for the [Unbound](http://unbound.net/) recursive DNS server. A command-line tool to receive and decode `dnstap` events is also being worked on.
 
 We plan to define more event types and add support to more DNS servers in the future.
 
