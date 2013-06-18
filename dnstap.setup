@@ -40,6 +40,7 @@ add_plugins:
 - favicon
 - goodstuff
 - prettydate
+- rawhtml
 - repolist
 # plugins to disable
 disable_plugins:
