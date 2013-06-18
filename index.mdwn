@@ -5,10 +5,6 @@ We plan to define more event types and add support to more DNS servers in the fu
 
 Check out [this example output](https://gist.github.com/edmonds/5772879) from the `dnstap` command-line tool to get an idea of the kind of information that `dnstap` can encode.
 
-### Architecture
-
-[[!img  dnstap.png size=300x221]]
-
 ### Presentations
 A [slide deck](slides/dnstap.html) introducing `dnstap` and giving the current status was presented on June 13, 2013.
 

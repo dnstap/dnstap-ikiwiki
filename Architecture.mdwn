@@ -1,0 +1,14 @@
+There are four logical components in the `dnstap` system:
+
+ * The encoding format, which specifies how to encode event messages (or "dnstap payloads").
+ * The transport, which carries serialized event messages over a reliable byte-stream socket.
+ * The sender, which generates events using the encoding format and hands them off to the transport.
+ * The receiver, which consumes serialized events from the transport, potentially deserializing them using the encoding format.
+
+The following diagram depicts a `dnstap`-enabled system integrating all four components. Note that the transport in this system is an advanced asynchronous implementation that uses per-thread worker queues.
+
+[[!img  dnstap.png size=512x378]]
+
+The following diagram is a directed acyclic graph which shows the dependencies between individual modules in the `dnstap` system. These modules are concrete components provided by the various repositories listed on the [[Source]] page.
+
+[[!img  dependency_tree.png size=512x324]]
