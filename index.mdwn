@@ -10,3 +10,5 @@ A [slide deck](slides/dnstap.html) introducing `dnstap` and giving the current s
 
 ### Community
 There is a [mailing list](http://lists.redbarn.org/mailman/listinfo/dnstap) for everyone interested in discussing `dnstap`.
+
+All source code, website code, and presentation material is being hosted on [GitHub](https://github.com/dnstap).
