@@ -1,4 +1,4 @@
-The following code repositories are available.
+The following code repositories are available. See the [[Examples]] page for example `dnstap` usage.
 
 ### [dnstap](https://github.com/dnstap/dnstap)
 This is the C library for adding `dnstap` support to a DNS server.
