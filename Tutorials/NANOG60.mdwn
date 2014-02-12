@@ -1,2 +1,3 @@
 Using the NANOG 60 edition of dnstap
 
+A "NANOG edition" of `dnstap` was produced for the NANOG 60 presentation. It consists of a patched Unbound 1.4.21 server, the `dnstap` command-line tool, and the necessary dependencies.
