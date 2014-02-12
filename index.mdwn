@@ -10,7 +10,7 @@ A standalone command-line tool for receiving and decoding `dnstap` log messages 
 The current development trees can be found on the [[Source]] page.
 
 ### Presentations
-"dnstap: high speed DNS server event replication without packet capture." [Slides](slides/dnstap.html). Presented in June 2013.
+"dnstap: high speed DNS server event replication without packet capture". [Slides](slides/dnstap.html). Presented in June 2013.
 
 ["dnstap: high speed DNS logging without packet capture"](https://www.nanog.org/meetings/abstract?id=2290). [Slides](slides/dnstap_nanog60.pdf). [[Code|Tutorials/NANOG60]]. Presented in February 2013 at NANOG 60.
 
