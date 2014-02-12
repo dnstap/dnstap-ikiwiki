@@ -1,6 +1,6 @@
 A "NANOG edition" of `dnstap` was produced for the NANOG 60 presentation. It consists of a patched Unbound 1.4.21 server, the `dnstap` command-line tool, and the necessary dependencies.
 
-The NANOG 60 tarball snapshots can be downloaded [here](https://dl.farsightsecurity.com/dist/presentations/nanog60).
+The NANOG 60 tarball snapshots and related files can be downloaded [here](https://dl.farsightsecurity.com/dist/presentations/nanog60).
 
 ### Prerequisites
 
@@ -8,9 +8,9 @@ If compiling everything from source, build environments for the C, C++, and Go p
 
 The `pkg-config` utility is required.
 
-The Go binary distribution from (golang.org)[http://golang.org/doc/install) should be used, unless your OS includes a recent (Go 1.1 or 1.2+) release.
+The Go binary distribution from [golang.org](http://golang.org/doc/install) should be used, unless your OS includes a recent (Go 1.1 or 1.2+) release.
 
-Google `protobuf` is required. On Debian systems, the `protobuf-compiler`, `libprotobuf-dev`, and `libprotoc-dev` packages can be installed instead.
+[Google protobuf](https://code.google.com/p/protobuf/) is required. On Debian systems, the `protobuf-compiler`, `libprotobuf-dev`, and `libprotoc-dev` packages can be installed instead.
 
 ### C components
 
@@ -34,13 +34,13 @@ cd protobuf-c-1.0.0-pre
 
 ### Go components
 
-You may be able to install the needed components with the following command:
+You may be able to install the needed components with the following command, if your Go environment is already set up:
 
 ```
 go get -u -v github.com/dnstap/golang-dnstap/dnstap
 ```
 
-However, for completeness, tarball snapshots are available for all of the Go components.
+Or, the tarball snapshots can be used for all of the Go components.
 
 ```
 export GOPATH=~/go
@@ -70,7 +70,7 @@ cd unbound-1.4.21+dnstap1
 ./configure --enable-dnstap && make && sudo make install
 ```
 
-Download the example `unbound.conf` file. This config file runs unbound on localhost, port 53053, and enables `dnstap` output to the socket `/tmp/dnstap.sock`.
+Download the example `unbound.conf` file. This config file runs `unbound` on localhost, port 53053, and enables `dnstap` output to the socket `/tmp/dnstap.sock`.
 
 ```
 wget -O /tmp/unbound.conf https://dl.farsightsecurity.com/dist/presentations/nanog60/unbound.conf
@@ -125,7 +125,7 @@ Shut down the Unbound server.
 
 Shut down the `dnstap` utility.
 
-The file `/tmp/dnstap.out` now contains `dnstap` log messages and can be decoded with the `dnstap` utility.
+The file `/tmp/dnstap.out` now contains `dnstap` log messages that can be decoded with the `dnstap` utility.
 
 ```
 dnstap -r /tmp/dnstap.out
