@@ -12,7 +12,7 @@ The current development trees can be found on the [[Source]] page.
 ### Presentations
 dnstap: high speed DNS server event replication without packet capture. [Slides](slides/dnstap.html). Presented in June 2013.
 
-[dnstap: high speed DNS logging without packet capture](https://www.nanog.org/meetings/abstract?id=2290). [Slides](slides/dnstap_nanog60.pdf). [Code](https://dl.farsightsecurity.com/dist/presentations/nanog60). Presented in February 2013 at NANOG 60.
+[dnstap: high speed DNS logging without packet capture](https://www.nanog.org/meetings/abstract?id=2290). [Slides](slides/dnstap_nanog60.pdf). [[Code|Tutorials/NANOG60]]. Presented in February 2013 at NANOG 60.
 
 ### Community
 There is a [mailing list](http://lists.redbarn.org/mailman/listinfo/dnstap) for everyone interested in discussing `dnstap`.
