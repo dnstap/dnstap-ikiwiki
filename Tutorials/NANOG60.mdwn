@@ -132,3 +132,5 @@ The file `/tmp/dnstap.out` now contains `dnstap` log messages that can be decode
 dnstap -r /tmp/dnstap.out
 dnstap -r /tmp/dnstap.out -y
 ```
+
+Links to sample `dnstap` output: [quiet text format](https://gist.github.com/edmonds/8960435#file-dnstap-out-txt), [YAML text format](https://gist.github.com/edmonds/8960435#file-dnstap-out-yaml).
