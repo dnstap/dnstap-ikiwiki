@@ -21,13 +21,13 @@ You also need a capture tool listening on the other side of the socket.
 The following command listens on the given `AF_UNIX` socket and decodes messages to `stdout`.
 
 ```
-dnstap -s /var/run/unbound/dnstap.sock
+dnstap -u /var/run/unbound/dnstap.sock
 ```
 
 The following command listens on the given `AF_UNIX` socket and saves message payloads to a binary `dnstap`-format log file.
 
 ```
-dnstap -s /tmp/dnstap.sock -w /tmp/test.dnstap
+dnstap -u /tmp/dnstap.sock -w /tmp/test.dnstap
 ```
 
 The following command reads a previously saved `dnstap`-format log file and writes [YAML](http://en.wikipedia.org/wiki/YAML)-formatted output to `stdout`. This format is extremely verbose.
