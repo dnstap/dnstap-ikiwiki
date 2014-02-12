@@ -8,7 +8,3 @@ There are four logical components in the `dnstap` system:
 The following diagram depicts a `dnstap`-enabled system integrating all four components. Note that the transport in this system is an advanced asynchronous implementation that uses per-thread worker queues.
 
 [[!img  dnstap.png size=512x378]]
-
-The following diagram is a directed acyclic graph which shows the dependencies between individual modules in the `dnstap` system. These modules are concrete components provided by the various repositories listed on the [[Source]] page.
-
-[[!img  dependency_tree.png size=512x324]]
