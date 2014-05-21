@@ -10,11 +10,17 @@ A standalone command-line tool for receiving and decoding `dnstap` log messages 
 The current development trees can be found on the [[Source]] page.
 
 ### Presentations
-"dnstap: high speed DNS server event replication without packet capture". [Slides](slides/dnstap.html). Presented in June 2013.
+["dnstap: introduction and status update"](https://indico.dns-oarc.net/contributionDisplay.py?contribId=15&confId=19). [Slides](slides/dnstap_oarc2014_warsaw.pdf). Presented in May 2014 at the OARC 2014 Spring Workshop by Robert Edmonds in Warsaw.
 
-["dnstap: high speed DNS logging without packet capture"](https://www.nanog.org/meetings/abstract?id=2290). [Slides](slides/dnstap_nanog60.pdf). [[Tutorial|Tutorials/NANOG60]]. Presented in February 2014 at NANOG 60 in Atlanta.
+["dnstap: high speed DNS logging without packet capture"](http://www.first.org/events/colloquia/amsterdam2014/program#pdnstap-high-speed-dns-logging-without-packet-capture). Presented in April 2014 at FIRST TC by Jeroen Massar in Amsterdam.
 
-["dnstap: introduction and status update"](https://indico.dns-oarc.net/contributionDisplay.py?contribId=15&confId=19). [Slides](slides/dnstap_oarc2014_warsaw.pdf). Presented in May 2014 at the OARC 2014 Spring Workshop in Warsaw.
+["dnstap: high speed DNS logging without packet capture"](http://ecrimeresearch.org/events/eCRSyncup2014/workingagenda). [Slides](slides/dnstap_esync2014.pdf). Presented in April 2014 at APWG eCrime Researchers Sync-Up IV by Jeroen Massar in Oberammergau, Germany.
+
+["dnstap: high speed DNS logging without packet capture"](https://www.nanog.org/meetings/abstract?id=2290). [Slides](slides/dnstap_nanog60.pdf). [[Tutorial|Tutorials/NANOG60]]. Presented in February 2014 at NANOG 60 by Robert Edmonds in Atlanta.
+
+["Passive DNS Collection and Analysis: The 'dnstap' Approach"](http://www.cert.org/flocon/2014/proceedings-2014.html). [Slides](slides/dnstap_flocon2014.pdf). Presented in January 2014 at FloCon 2014 by Paul Vixie in Charleston, SC.
+
+"dnstap: high speed DNS server event replication without packet capture". [Slides](slides/dnstap.html). Presented in June 2013 by Robert Edmonds.
 
 ### Community
 There is a [mailing list](http://lists.redbarn.org/mailman/listinfo/dnstap) for everyone interested in discussing `dnstap`.
