@@ -16,7 +16,7 @@ The current development trees can be found on the [[Source]] page.
 
 ["dnstap: high speed DNS logging without packet capture"](http://ecrimeresearch.org/events/eCRSyncup2014/workingagenda). [Slides](slides/dnstap_esync2014.pdf). Presented in April 2014 at APWG eCrime Researchers Sync-Up IV by Jeroen Massar in Oberammergau, Germany.
 
-["dnstap: high speed DNS logging without packet capture"](https://www.nanog.org/meetings/abstract?id=2290). [Slides](slides/dnstap_nanog60.pdf). [[Tutorial|Tutorials/NANOG60]]. Presented in February 2014 at NANOG 60 by Robert Edmonds in Atlanta.
+["dnstap: high speed DNS logging without packet capture"](https://www.nanog.org/meetings/abstract?id=2290). [Slides](slides/dnstap_nanog60.pdf). [Video](https://www.youtube.com/watch?v=rJ3vUUi_FG8). [[Tutorial|Tutorials/NANOG60]]. Presented in February 2014 at NANOG 60 by Robert Edmonds in Atlanta.
 
 ["Passive DNS Collection and Analysis: The 'dnstap' Approach"](http://www.cert.org/flocon/2014/proceedings-2014.html). [Slides](slides/dnstap_flocon2014.pdf). Presented in January 2014 at FloCon 2014 by Paul Vixie in Charleston, SC.
 
