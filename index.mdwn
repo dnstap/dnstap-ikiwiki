@@ -10,6 +10,8 @@ A standalone command-line tool for receiving and decoding `dnstap` log messages 
 The current development trees can be found on the [[Source]] page.
 
 ### Presentations
+"dnstap: brief intro and update". [Slides](slides/dnstap_nanog61.pdf). Presented in June 2014 at NANOG 61 by Merike Kaeo in Bellevue, WA.
+
 ["dnstap: introduction and status update"](https://indico.dns-oarc.net/contributionDisplay.py?contribId=15&confId=19). [Slides](slides/dnstap_oarc2014_warsaw.pdf). Presented in May 2014 at the OARC 2014 Spring Workshop by Robert Edmonds in Warsaw.
 
 ["dnstap: high speed DNS logging without packet capture"](http://www.first.org/events/colloquia/amsterdam2014/program#pdnstap-high-speed-dns-logging-without-packet-capture). Presented in April 2014 at FIRST TC by Jeroen Massar in Amsterdam.
