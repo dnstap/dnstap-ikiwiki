@@ -3,7 +3,7 @@
 Add the following lines to `unbound.conf`:
 
 ```
-server:
+dnstap:
     dnstap-enable: yes
     dnstap-socket-path: "/var/run/unbound/dnstap.sock"
     dnstap-send-identity: yes
