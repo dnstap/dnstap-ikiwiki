@@ -12,7 +12,7 @@ dnstap:
     dnstap-log-client-query-messages: yes
 ```
 
-Start Unbound and it will begin sending `dnstap` payloads to the `AF_UNIX` socket specified by the `dnstap-socket-path` variable.
+Start Unbound and it will begin sending `dnstap` payloads to the `AF_UNIX` socket specified by the `dnstap-socket-path` variable. Note that Unbound will attempt to connect to this socket path and will periodically attempt to reconnect if a capture tool is not listening for connections. (This allows the capture tool to receive multiple streams of dnstap data over a single socket.)
 
 You also need a capture tool listening on the other side of the socket.
 
