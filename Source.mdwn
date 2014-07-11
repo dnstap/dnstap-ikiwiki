@@ -28,6 +28,8 @@ $ git clone https://github.com/protobuf-c/protobuf-c.git
 $ cd protobuf-c && ./autogen.sh && ./configure && make && sudo make install
 ```
 
+Note that some of the dnstap patchsets target `protobuf-c` 1.0.0, which has not been released yet. Currently, please use the `master` branch from GitHub.
+
 ### [Unbound with dnstap support](https://github.com/dnstap/unbound)
 This is [NLNet Labs'](http://nlnetlabs.nl/) [Unbound](http://unbound.net/) recursive DNS server, patched to generate `dnstap` payloads. `dnstap` support is developed on separate branches corresponding to particular Unbound releases.
 
