@@ -1,3 +1,7 @@
+### Knot DNS server
+
+See the [Knot DNS documentation](https://www.knot-dns.cz/static/documentation/html/configuration.html#query-modules) for details on configuring `dnstap` support. Note that the `dnstap` support in Knot DNS currently requires `protobuf-c` 1.0.0 and the latest git snapshot of `fstrm`.
+
 ### Unbound DNS server
 
 Add the following lines to `unbound.conf`:
