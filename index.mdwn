@@ -10,7 +10,7 @@ A standalone command-line tool for receiving and decoding `dnstap` log messages 
 The current development trees can be found on the [[Source]] page.
 
 ### Presentations
-["Passive DNS Collection and Analysis: The 'dnstap' (& fstrm) Approach"](https://www.verisigninc.com/en_US/innovation/verisign-labs/speakers-series/passive-dns-collection-analysis/index.xhtml). Presented in December 2014 at Verisign Labs by Paul Vixie and Robert Edmonds in Reston, VA.
+["Passive DNS Collection and Analysis: The 'dnstap' (& fstrm) Approach"](https://www.verisigninc.com/en_US/innovation/verisign-labs/speakers-series/passive-dns-collection-analysis/index.xhtml). [Slides](slides/dnstap_vldss2014.pdf). Presented in December 2014 at Verisign Labs by Paul Vixie and Robert Edmonds in Reston, VA.
 
 "dnstap: brief intro and update". [Slides](slides/dnstap_nanog61.pdf). Presented in June 2014 at NANOG 61 by Merike Kaeo in Bellevue, WA.
 
