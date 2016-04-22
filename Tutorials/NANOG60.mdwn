@@ -1,3 +1,5 @@
+__NOTE: The instructions below are outdated and are only provided for reference purposes. The code snapshots produced for the NANOG 60 presentation are pre-releases and will not interoperate with current versions.__
+
 A "NANOG edition" of `dnstap` was produced for the NANOG 60 presentation. It consists of a patched Unbound 1.4.21 server, the `dnstap` command-line tool, and the necessary dependencies.
 
 The NANOG 60 tarball snapshots and related files can be downloaded [here](https://dl.farsightsecurity.com/dist/presentations/nanog60).
