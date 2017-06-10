@@ -18,46 +18,38 @@ The Go binary distribution from [golang.org](http://golang.org/doc/install) shou
 
 Install the `fstrm` library.
 
-```
-wget https://dl.farsightsecurity.com/dist/presentations/nanog60/fstrm-0.1.0.tar.gz
-tar xvf fstrm-0.1.0.tar.gz
-cd fstrm-0.1.0
-./configure && make && sudo make install
-```
+    wget https://dl.farsightsecurity.com/dist/presentations/nanog60/fstrm-0.1.0.tar.gz
+    tar xvf fstrm-0.1.0.tar.gz
+    cd fstrm-0.1.0
+    ./configure && make && sudo make install
 
 Install the `protobuf-c` library. (Do not use the `protobuf-c` packages from your distribution. They are too old.)
 
-```
-wget https://dl.farsightsecurity.com/dist/presentations/nanog60/protobuf-c-1.0.0-pre.tar.gz
-tar xvf protobuf-c-1.0.0-pre.tar.gz
-cd protobuf-c-1.0.0-pre
-./configure && make && sudo make install
-```
+    wget https://dl.farsightsecurity.com/dist/presentations/nanog60/protobuf-c-1.0.0-pre.tar.gz
+    tar xvf protobuf-c-1.0.0-pre.tar.gz
+    cd protobuf-c-1.0.0-pre
+    ./configure && make && sudo make install
 
 ### Go components
 
 You may be able to install the needed components with the following command, if your Go environment is already set up:
 
-```
-go get -u -v github.com/dnstap/golang-dnstap/dnstap
-```
+    go get -u -v github.com/dnstap/golang-dnstap/dnstap
 
 Or, the tarball snapshots can be used for all of the Go components.
 
-```
-export GOPATH=~/go
-export PATH=~/go/bin:$PATH
-cd ~/go
-wget https://dl.farsightsecurity.com/dist/presentations/nanog60/golang-dns.tar.gz
-wget https://dl.farsightsecurity.com/dist/presentations/nanog60/golang-dnstap.tar.gz
-wget https://dl.farsightsecurity.com/dist/presentations/nanog60/golang-framestream.tar.gz
-wget https://dl.farsightsecurity.com/dist/presentations/nanog60/golang-goprotobuf.tar.gz
-tar xvf golang-dns.tar.gz
-tar xvf golang-dnstap.tar.gz
-tar xvf golang-framestream.tar.gz
-tar xvf golang-goprotobuf.tar.gz
-go install -v github.com/dnstap/golang-dnstap/dnstap
-```
+    export GOPATH=~/go
+    export PATH=~/go/bin:$PATH
+    cd ~/go
+    wget https://dl.farsightsecurity.com/dist/presentations/nanog60/golang-dns.tar.gz
+    wget https://dl.farsightsecurity.com/dist/presentations/nanog60/golang-dnstap.tar.gz
+    wget https://dl.farsightsecurity.com/dist/presentations/nanog60/golang-framestream.tar.gz
+    wget https://dl.farsightsecurity.com/dist/presentations/nanog60/golang-goprotobuf.tar.gz
+    tar xvf golang-dns.tar.gz
+    tar xvf golang-dnstap.tar.gz
+    tar xvf golang-framestream.tar.gz
+    tar xvf golang-goprotobuf.tar.gz
+    go install -v github.com/dnstap/golang-dnstap/dnstap
 
 You should now have a `dnstap` utility installed in `~/go/bin`.
 
@@ -65,64 +57,50 @@ You should now have a `dnstap` utility installed in `~/go/bin`.
 
 Install Unbound patched with `dnstap` support. Note that `dnstap` support must be turned on with a configure parameter and must be enabled at runtime in the `unbound.conf` file.
 
-```
-wget https://dl.farsightsecurity.com/dist/presentations/nanog60/unbound-1.4.21+dnstap1.tar.gz
-tar xvf unbound-1.4.21+dnstap1.tar.gz
-cd unbound-1.4.21+dnstap1
-./configure --enable-dnstap && make && sudo make install
-```
+    wget https://dl.farsightsecurity.com/dist/presentations/nanog60/unbound-1.4.21+dnstap1.tar.gz
+    tar xvf unbound-1.4.21+dnstap1.tar.gz
+    cd unbound-1.4.21+dnstap1
+    ./configure --enable-dnstap && make && sudo make install
 
 Download the example `unbound.conf` file. This config file runs `unbound` on localhost, port 53053, and enables `dnstap` output to the socket `/tmp/dnstap.sock`.
 
-```
-wget -O /tmp/unbound.conf https://dl.farsightsecurity.com/dist/presentations/nanog60/unbound.conf
-```
+    wget -O /tmp/unbound.conf https://dl.farsightsecurity.com/dist/presentations/nanog60/unbound.conf
 
 ### Running
 
 Run the `dnstap` utility, listening on the socket `/tmp/dnstap.sock` and writing binary payload data to `/tmp/dnstap.out`. Note that this utility does not daemonize.
 
-```
-dnstap -u /tmp/dnstap.sock -w /tmp/dnstap.out
-```
+    dnstap -u /tmp/dnstap.sock -w /tmp/dnstap.out
 
 Run the `unbound` server with the example `unbound.conf` file. Note that the server won't detach from the terminal and daemonize. Make sure you are using the patched Unbound that was built in the previous step.
 
-```
-unbound -c /tmp/unbound.conf
-```
+    unbound -c /tmp/unbound.conf
 
 You should see something like the following output from the `unbound` server. Note the log output about `dnstap`:
 
-```
-Feb 11 23:02:42 unbound[19627:0] notice: init module 0: validator
-Feb 11 23:02:42 unbound[19627:0] notice: init module 1: iterator
-Feb 11 23:02:42 unbound[19627:0] notice: opening dnstap socket /tmp/dnstap.sock
-Feb 11 23:02:42 unbound[19627:0] notice: dnstap identity field set to "nanog60-dnstap-demo"
-Feb 11 23:02:42 unbound[19627:0] notice: dnstap version field set to "unbound 1.4.21+dnstap1"
-Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/RESOLVER_QUERY enabled
-Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/RESOLVER_RESPONSE enabled
-Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/CLIENT_QUERY enabled
-Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/CLIENT_RESPONSE enabled
-Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/FORWARDER_QUERY enabled
-Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/FORWARDER_RESPONSE enabled
-Feb 11 23:02:42 unbound[19627:0] info: start of service (unbound 1.4.21).
-```
+    Feb 11 23:02:42 unbound[19627:0] notice: init module 0: validator
+    Feb 11 23:02:42 unbound[19627:0] notice: init module 1: iterator
+    Feb 11 23:02:42 unbound[19627:0] notice: opening dnstap socket /tmp/dnstap.sock
+    Feb 11 23:02:42 unbound[19627:0] notice: dnstap identity field set to "nanog60-dnstap-demo"
+    Feb 11 23:02:42 unbound[19627:0] notice: dnstap version field set to "unbound 1.4.21+dnstap1"
+    Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/RESOLVER_QUERY enabled
+    Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/RESOLVER_RESPONSE enabled
+    Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/CLIENT_QUERY enabled
+    Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/CLIENT_RESPONSE enabled
+    Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/FORWARDER_QUERY enabled
+    Feb 11 23:02:42 unbound[19627:0] notice: dnstap Message/FORWARDER_RESPONSE enabled
+    Feb 11 23:02:42 unbound[19627:0] info: start of service (unbound 1.4.21).
 
 Once `unbound` starts up and connects to the `dnstap` socket, you should see something like the following output from the `dnstap` utility:
 
-```
-dnstap: opened input socket /tmp/dnstap.sock
-dnstap.FrameStreamSockInput: accepted a socket connection
-```
+    dnstap: opened input socket /tmp/dnstap.sock
+    dnstap.FrameStreamSockInput: accepted a socket connection
 
 Send DNS queries to the Unbound server. Make sure the queries are sent to the right server and port. The example `unbound.conf` listens on `127.0.0.1`, port `53053`.
 
-```
-dig -p 53053 @127.0.0.1 dnstap.info
-dig -p 53053 @127.0.0.1 www.google.com
-dig -p 53053 @127.0.0.1 www.nanog.org
-```
+    dig -p 53053 @127.0.0.1 dnstap.info
+    dig -p 53053 @127.0.0.1 www.google.com
+    dig -p 53053 @127.0.0.1 www.nanog.org
 
 Shut down the Unbound server.
 
@@ -130,9 +108,7 @@ Shut down the `dnstap` utility.
 
 The file `/tmp/dnstap.out` now contains `dnstap` log messages that can be decoded with the `dnstap` utility.
 
-```
-dnstap -r /tmp/dnstap.out
-dnstap -r /tmp/dnstap.out -y
-```
+    dnstap -r /tmp/dnstap.out
+    dnstap -r /tmp/dnstap.out -y
 
 Links to sample `dnstap` output: [quiet text format](https://gist.github.com/edmonds/8960435#file-dnstap-out-txt), [YAML text format](https://gist.github.com/edmonds/8960435#file-dnstap-out-yaml).

@@ -6,15 +6,13 @@ See the [Knot DNS documentation](https://www.knot-dns.cz/docs/2.x/html/configura
 
 Add the following lines to `unbound.conf`:
 
-```
-dnstap:
-    dnstap-enable: yes
-    dnstap-socket-path: "/var/run/unbound/dnstap.sock"
-    dnstap-send-identity: yes
-    dnstap-send-version: yes
-    dnstap-log-resolver-response-messages: yes
-    dnstap-log-client-query-messages: yes
-```
+    dnstap:
+        dnstap-enable: yes
+        dnstap-socket-path: "/var/run/unbound/dnstap.sock"
+        dnstap-send-identity: yes
+        dnstap-send-version: yes
+        dnstap-log-resolver-response-messages: yes
+        dnstap-log-client-query-messages: yes
 
 Start Unbound and it will begin sending `dnstap` payloads to the `AF_UNIX` socket specified by the `dnstap-socket-path` variable. Note that Unbound will attempt to connect to this socket path and will periodically attempt to reconnect if a capture tool is not listening for connections. (This allows the capture tool to receive multiple streams of dnstap data over a single socket.)
 
@@ -24,24 +22,16 @@ You also need a capture tool listening on the other side of the socket.
 
 The following command listens on the given `AF_UNIX` socket and decodes messages to `stdout`.
 
-```
-dnstap -u /var/run/unbound/dnstap.sock
-```
+    dnstap -u /var/run/unbound/dnstap.sock
 
 The following command listens on the given `AF_UNIX` socket and saves message payloads to a binary `dnstap`-format log file.
 
-```
-dnstap -u /tmp/dnstap.sock -w /tmp/test.dnstap
-```
+    dnstap -u /tmp/dnstap.sock -w /tmp/test.dnstap
 
 The following command reads a previously saved `dnstap`-format log file and writes [YAML](http://en.wikipedia.org/wiki/YAML)-formatted output to `stdout`. This format is extremely verbose.
 
-```
-dnstap -y -r test.dnstap
-```
+    dnstap -y -r test.dnstap
 
 The following command reads a previously saved `dnstap`-format log file and writes [YAML](http://en.wikipedia.org/wiki/YAML)-formatted output to the given output file. This format is extremely verbose.
 
-```
-dnstap -y -r test.dnstap -w test.yaml
-```
+    dnstap -y -r test.dnstap -w test.yaml
