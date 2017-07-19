@@ -3,7 +3,15 @@
 
 Currently `dnstap` can only encode wire-format DNS messages. It is planned to support additional types of DNS log information.
 
-Server-side `dnstap` support is included in the [Knot DNS](https://www.knot-dns.cz/) authoritative nameserver as of [version 1.5.0](https://lists.nic.cz/pipermail/knot-dns-users/2014-July/000477.html) and in the [Unbound](http://unbound.net/) recursive DNS server as of [version 1.5.0](http://www.unbound.net/pipermail/unbound-users/2014-November/003620.html). It is planned to develop `dnstap` support for additional DNS servers and other kinds of DNS software.
+Support for `dnstap` is included in several DNS servers, including:
+
+ * [Knot DNS](https://www.knot-dns.cz/) as of [version 1.5.0](https://lists.nic.cz/pipermail/knot-dns-users/2014-July/000477.html)
+
+ * [Unbound](http://unbound.net/) as of [version 1.5.0](http://www.unbound.net/pipermail/unbound-users/2014-November/003620.html)
+
+ * [BIND](https://www.isc.org/downloads/bind/) as of [version 9.11](https://kb.isc.org/article/AA-01342/0/Using-DNSTAP-with-BIND-9.11.html)
+
+ * [Knot Resolver](https://www.knot-resolver.cz/) as of [version 1.2.5](https://www.knot-resolver.cz/2017-04-05-knot-resolver-1.2.5.html)
 
 A standalone command-line tool for receiving and decoding `dnstap` log messages is also being worked on. Check out [this example output](https://gist.github.com/edmonds/5772879) from the `dnstap` command to get an idea of the kind of information that `dnstap` can encode.
 
