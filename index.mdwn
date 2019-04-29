@@ -12,6 +12,8 @@ Support for `dnstap` is included in several DNS servers, including:
  * [BIND](https://www.isc.org/downloads/bind/) as of [version 9.11](https://kb.isc.org/article/AA-01342/0/Using-DNSTAP-with-BIND-9.11.html)
 
  * [Knot Resolver](https://www.knot-resolver.cz/) as of [version 1.2.5](https://www.knot-resolver.cz/2017-04-05-knot-resolver-1.2.5.html)
+ 
+ * [CoreDNS](https://coredns.io) as of [version 1.5.0](https://github.com/coredns/coredns/releases/tag/v1.5.0)
 
 A standalone command-line tool for receiving and decoding `dnstap` log messages is also being worked on. Check out [this example output](https://gist.github.com/edmonds/5772879) from the `dnstap` command to get an idea of the kind of information that `dnstap` can encode.
 
