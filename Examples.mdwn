@@ -20,6 +20,8 @@ You also need a capture tool listening on the other side of the socket.
 
 ### _dnstap_ command-line tool
 
+The [dnstap](https://github.com/dnstap/golang-dnstap/tree/master/dnstap) command-line tool can read, write, and decode dnstap data from a running name server or a previously-saved file.
+
 The following command listens on the given `AF_UNIX` socket and decodes messages to `stdout`.
 
     dnstap -u /var/run/unbound/dnstap.sock
