@@ -1,6 +1,6 @@
 ### Knot DNS server
 
-See the [Knot DNS documentation](https://www.knot-dns.cz/docs/2.x/singlehtml/index.html#dnstap-dnstap-traffic-logging) for details on configuring `dnstap` support.
+See the [Knot DNS documentation](https://www.knot-dns.cz/docs/latest/singlehtml/index.html#dnstap-dnstap-traffic-logging) for details on configuring `dnstap` support.
 
 ### Unbound DNS server
 
